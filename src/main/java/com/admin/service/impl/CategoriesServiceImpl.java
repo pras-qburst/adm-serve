@@ -19,6 +19,8 @@ package com.admin.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -39,6 +41,7 @@ class CategoriesServiceImpl implements CategoriesService {
 		this.categoriesRepository = categoriesRepository;
 	}
 
+	@PreAuthorize("true")
 	@Override
 	public List<ProductCategory> getCategoriesForChannel(String channelId) {
 		// TODO Auto-generated method stub

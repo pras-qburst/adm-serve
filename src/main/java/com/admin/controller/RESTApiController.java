@@ -3,6 +3,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,7 +36,7 @@ public class RESTApiController {
   
   
  
-  
+
   @RequestMapping(method = RequestMethod.GET, value="/products/{channelId}")
   public List<Product> getAllProductsByChannelId(@PathVariable("channelId") String channelId){
    
@@ -43,6 +44,7 @@ public class RESTApiController {
 	  return productService.getProductsForChannel(channelId);
   }
   
+
   @RequestMapping(method = RequestMethod.GET, value="/categories/{channelId}")
   public List<ProductCategory> getAllCatagorieByChannelId(@PathVariable("channelId") String channelId){
    

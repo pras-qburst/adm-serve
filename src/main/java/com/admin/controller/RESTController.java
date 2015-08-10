@@ -19,7 +19,7 @@ import com.admin.service.ServiceTypeService;
 
 @RestController
 @RequestMapping("/api")
-public class RESTApiController {
+public class RESTController {
   
 
   @Qualifier("categoriesService")

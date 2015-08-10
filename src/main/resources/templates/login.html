@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
+ <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></link>
 
-<title>Adming Login</title>
+<title>Admin Login</title>
+<!-- <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css"
+th:href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" media="screen"/> -->
 </head>
 <body>
- 
+     <div class="container">
 		<div th:if="${param.error}">
 		<font size="3" color="red">Invalid username and password.!</font>
 		</div>
@@ -25,6 +30,6 @@
 				<input type="submit" value="Sign In" />
 			</div>
 		</form>
-	
+	  </div>
 </body>
 </html>

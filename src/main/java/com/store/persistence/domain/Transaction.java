@@ -1,5 +1,12 @@
 package com.store.persistence.domain;
 
+/**
+ *
+ *  Transaction Entity - Maps to Transaction Table that receives all customer transactions
+ *  
+ *  @author Prasanth Pai
+ */
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -390,7 +397,6 @@ public class Transaction {
 	public void setPaymentMode(String paymentMode) {
 		this.paymentMode = paymentMode;
 	}
-
 
 	public String getRespDesc() {
 		return respDesc;

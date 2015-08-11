@@ -2,7 +2,7 @@ var taskManagerModule = angular.module('productManagerApp', ['ngAnimate']);
 
 taskManagerModule.controller('productManagerController', function ($scope,$http) {
 	
-	var urlBase="/admserv";
+	var urlBase="/sportsstore";
 	
 	$http.defaults.headers.post["Content-Type"] = "application/json";
 	$scope.api="";

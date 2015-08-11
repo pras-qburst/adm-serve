@@ -28,6 +28,13 @@ import com.store.persistence.domain.ProductCategory;
 import com.store.persistence.repo.CategoriesRepository;
 import com.store.service.CategoriesService;
 
+/**
+ * DAO methods to Product Category Table
+ * 
+ * @author prasanth
+ *
+ */
+
 @Component("categoriesService")
 @Transactional
 class CategoriesServiceImpl implements CategoriesService {

@@ -20,19 +20,19 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.store.AdminMainApplication;
-import com.store.AdminWebSecurityConfig;
+import com.store.ApplicationStart;
+import com.store.SecurityConfig;
 import com.store.SecureApplicationTests.TestConfiguration;
 import com.store.service.CategoriesService;
 
 /**
  * Basic integration tests for demo application.
  *
- * @author Dave Syer
+ * @author Prasanth
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = { AdminMainApplication.class,
-		AdminWebSecurityConfig.class })
+@SpringApplicationConfiguration(classes = { ApplicationStart.class,
+		SecurityConfig.class })
 public class SecureApplicationTests {
 	@Autowired
 	private CategoriesService service;
@@ -69,7 +69,6 @@ public class SecureApplicationTests {
 
 	}
 
-	
 
 	@PropertySource("classpath:application-test.properties")
 	@Configuration

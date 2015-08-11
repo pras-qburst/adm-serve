@@ -9,6 +9,13 @@ import org.springframework.data.repository.Repository;
 
 import com.store.persistence.domain.Product;
 
+/**
+ * 
+ * Provides Product related db methods
+ * 
+ * @author prasanth
+ *
+ */
 public interface ProductRepository extends Repository<Product, Long> {
 
 	

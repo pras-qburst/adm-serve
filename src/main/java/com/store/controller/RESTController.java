@@ -1,4 +1,5 @@
 package com.store.controller;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,54 +17,69 @@ import com.store.service.CategoriesService;
 import com.store.service.ProductService;
 import com.store.service.ServiceTypeService;
 
+/**
+ * Rest Controller to receive all incomming API calls
+ * 
+ * @author prasanth
+ *
+ *
+ */
 
 @RestController
 @RequestMapping("/api")
 public class RESTController {
-  
 
-  @Qualifier("categoriesService")
-  @Autowired
-  private CategoriesService categoriesService;
-  
-  @Qualifier("productService")
-  @Autowired
-  private ProductService productService;
-  
-  @Qualifier("serviceTypeService")
-  @Autowired
-  private ServiceTypeService serviceTypeService;
-  
-  
- 
+	@Qualifier("categoriesService")
+	@Autowired
+	private CategoriesService categoriesService;
 
-  @RequestMapping(method = RequestMethod.GET, value="/products/{channelId}")
-  public List<Product> getAllProductsByChannelId(@PathVariable("channelId") String channelId){
-   
-	  //return categoriesService.getCategoriesForChannel(channelId);
-	  return productService.getProductsForChannel(channelId);
-  }
-  
+	@Qualifier("productService")
+	@Autowired
+	private ProductService productService;
 
-  @RequestMapping(method = RequestMethod.GET, value="/categories/{channelId}")
-  public List<ProductCategory> getAllCatagorieByChannelId(@PathVariable("channelId") String channelId){
-   
-	  return categoriesService.getCategoriesForChannel(channelId);
-  }
-  
-  @RequestMapping(method = RequestMethod.GET, value="/service/{channelId}")
-  public List<ServiceType> getAllServiceTypesByChannelId(@PathVariable("channelId") String channelId){
-   
-	  //return categoriesService.getCategoriesForChannel(channelId);
-	  return serviceTypeService.getAllServiceTypeForChannel(channelId);
-  }
-  
- /* @RequestMapping(method = RequestMethod.GET)
-  public Map<String, Object> getAllBooks(){
-    List<City> books = bookRepository.findAll();
-    Map<String, Object> response = new LinkedHashMap<String, Object>();
-    response.put("totalBooks", books.size());
-    response.put("books", books);
-    return response;
-  }*/
+	@Qualifier("serviceTypeService")
+	@Autowired
+	private ServiceTypeService serviceTypeService;
+
+	/**
+	 * Serve JSON response to provide all products by Channel Id
+	 * 
+	 * @param channelId
+	 * @return
+	 */
+	@RequestMapping(method = RequestMethod.GET, value = "/products/{channelId}")
+	public List<Product> getAllProductsByChannelId(
+			@PathVariable("channelId") String channelId) {
+
+		// return categoriesService.getCategoriesForChannel(channelId);
+		return productService.getProductsForChannel(channelId);
+	}
+
+	/**
+	 * Serve JSON response to provide all product categories by Channel Id
+	 * 
+	 * @param channelId
+	 * @return
+	 */
+
+	@RequestMapping(method = RequestMethod.GET, value = "/categories/{channelId}")
+	public List<ProductCategory> getAllCatagorieByChannelId(
+			@PathVariable("channelId") String channelId) {
+
+		return categoriesService.getCategoriesForChannel(channelId);
+	}
+
+	/**
+	 * Serve JSON response to provide all service type by Channel Id
+	 * 
+	 * @param channelId
+	 * @return
+	 */
+	@RequestMapping(method = RequestMethod.GET, value = "/service/{channelId}")
+	public List<ServiceType> getAllServiceTypesByChannelId(
+			@PathVariable("channelId") String channelId) {
+
+		return serviceTypeService.getAllServiceTypeForChannel(channelId);
+	}
+
 }

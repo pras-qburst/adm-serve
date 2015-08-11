@@ -7,10 +7,10 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.store.AdminMainApplication;
+import com.store.ApplicationStart;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = AdminMainApplication.class)
+@SpringApplicationConfiguration(classes = ApplicationStart.class)
 @WebAppConfiguration
 @ActiveProfiles("test")
 public class AdminServiceApplicationTests {

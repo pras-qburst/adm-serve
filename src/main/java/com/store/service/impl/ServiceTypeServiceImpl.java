@@ -26,6 +26,13 @@ import com.store.persistence.domain.ServiceType;
 import com.store.persistence.repo.ServiceTypeRepository;
 import com.store.service.ServiceTypeService;
 
+/**
+ * DAO methods to Service Table
+ * 
+ * @author prasanth
+ *
+ */
+
 @Component("serviceTypeService")
 @Transactional
 class ServiceTypeServiceImpl implements ServiceTypeService {

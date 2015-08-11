@@ -89,8 +89,8 @@ public class Product implements Serializable {
 
 
 	/**
-	 * BO status. Status is UPLOADED when BO file is uploaded to DB. The status
-	 * changes as and when maker or checker amends BO
+	 * product status. Status is UPLOADED when product file is uploaded to DB. The status
+	 * changes as and when maker or checker amends product
 	 */
 	@Column(name = "product_status")
 	private String productStatus;
@@ -111,30 +111,30 @@ public class Product implements Serializable {
 	
 
 	/**
-	 * @return the boId
+	 * @return the productId
 	 */
 	public long getProductId() {
 		return productId;
 	}
 
 	/**
-	 * @param boId
-	 *            the boId to set
+	 * @param productId
+	 *            the productId to set
 	 */
 	public void setProductId(long productId) {
 		this.productId = productId;
 	}
 
 	/**
-	 * @return the boName
+	 * @return the productName
 	 */
 	public String getName() {
 		return name;
 	}
 
 	/**
-	 * @param boName
-	 *            the boName to set
+	 * @param productName
+	 *            the productName to set
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -249,7 +249,7 @@ public class Product implements Serializable {
 		return productStatus;
 	}
 
-	public void setBoStatus(String productStatus) {
+	public void setproductStatus(String productStatus) {
 		this.productStatus = productStatus;
 	}
 

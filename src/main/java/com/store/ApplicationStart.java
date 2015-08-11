@@ -18,12 +18,23 @@ import org.springframework.http.HttpStatus;
 
 @SpringBootApplication
 // same as @Configuration @EnableAutoConfiguration @ComponentScan
-public class AdminMainApplication {
+public class ApplicationStart {
 
+	/**
+	 * Application start main method
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		SpringApplication.run(AdminMainApplication.class, args);
+		SpringApplication.run(ApplicationStart.class, args);
 	}
 
+	/**
+	 * Configuring Custom Error Pages on server Errors
+	 * 
+	 * @return
+	 */
+	
 	@Bean
 	public EmbeddedServletContainerCustomizer containerCustomizer() {
 

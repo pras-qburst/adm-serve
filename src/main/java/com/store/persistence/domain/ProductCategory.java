@@ -1,6 +1,8 @@
 package com.store.persistence.domain;
 
 /**
+ * Product Category Entity
+ * 
  * @author Prasanth Pai
  * 
  */

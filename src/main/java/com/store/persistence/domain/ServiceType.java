@@ -1,6 +1,8 @@
 package com.store.persistence.domain;
 
 /**
+ * Service Type Entity
+ * 
  * @author Prasanth Pai
  * 
  */

@@ -9,6 +9,14 @@ import org.springframework.data.repository.Repository;
 
 import com.store.persistence.domain.ServiceType;
 
+/**
+ * 
+ * Provides Service Type related db methods
+ * 
+ * @author prasanth
+ *
+ */
+
 public interface ServiceTypeRepository extends Repository<ServiceType, Long> {
 
 	

@@ -26,6 +26,13 @@ import com.store.persistence.domain.Product;
 import com.store.persistence.repo.ProductRepository;
 import com.store.service.ProductService;
 
+/**
+ * DAO methods to Product Table
+ * 
+ * @author prasanth
+ *
+ */
+
 @Component("productService")
 @Transactional
 class ProductServiceImpl implements ProductService {

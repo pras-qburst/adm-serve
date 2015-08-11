@@ -9,11 +9,17 @@ import org.springframework.data.repository.Repository;
 
 import com.store.persistence.domain.ProductCategory;
 
+/**
+ * 
+ * Provides Product Category related db methods
+ * 
+ * @author prasanth
+ *
+ */
+
 public interface CategoriesRepository extends Repository<ProductCategory, Long> {
 
 
-
-	
 	@Query(value="select * from product_category bc where bc.category_id in (select distinct product.category_id from product product  join product_channel_mapping  pcm on  product.id= pcm.product_id  where pcm.channel_id= ?)",nativeQuery = true)
 	List<ProductCategory> findByChannelId(String deliveryChannel);
 }

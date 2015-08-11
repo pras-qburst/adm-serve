@@ -3,6 +3,13 @@ package com.store.exception;
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * Custom error Handler to catch Server Unknown errors.
+ * 
+ * @author prasanth
+ *
+ */
+
 public class CustomErrorController implements ErrorController {
     private static final String PATH = "/error";
      

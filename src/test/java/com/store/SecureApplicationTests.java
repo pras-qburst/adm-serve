@@ -1,4 +1,4 @@
-package admin;
+package com.store;
 
 import static org.junit.Assert.assertEquals;
 import junit.framework.Assert;
@@ -20,11 +20,10 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.admin.AdminMainApplication;
-import com.admin.AdminWebSecurityConfig;
-import com.admin.service.CategoriesService;
-
-import admin.SecureApplicationTests.TestConfiguration;
+import com.store.AdminMainApplication;
+import com.store.AdminWebSecurityConfig;
+import com.store.SecureApplicationTests.TestConfiguration;
+import com.store.service.CategoriesService;
 
 /**
  * Basic integration tests for demo application.

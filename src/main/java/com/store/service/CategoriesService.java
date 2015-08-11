@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.admin.service;
+package com.store.service;
 
 import java.util.List;
 
-import com.admin.persistence.domain.ProductCategory;
+import com.store.persistence.domain.ProductCategory;
 
 public interface CategoriesService {
 

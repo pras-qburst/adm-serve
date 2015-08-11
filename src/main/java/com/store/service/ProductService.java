@@ -1,9 +1,9 @@
 
-package com.admin.service;
+package com.store.service;
 
 import java.util.List;
 
-import com.admin.persistence.domain.Product;
+import com.store.persistence.domain.Product;
 
 public interface ProductService {
 

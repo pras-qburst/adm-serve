@@ -1,13 +1,13 @@
 
 
-package com.admin.persistence.repo;
+package com.store.persistence.repo;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 
-import com.admin.persistence.domain.Product;
+import com.store.persistence.domain.Product;
 
 public interface ProductRepository extends Repository<Product, Long> {
 

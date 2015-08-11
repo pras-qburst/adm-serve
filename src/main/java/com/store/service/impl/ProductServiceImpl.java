@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.admin.service.impl;
+package com.store.service.impl;
 
 import java.util.List;
 
@@ -22,9 +22,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.admin.persistence.domain.Product;
-import com.admin.persistence.repo.ProductRepository;
-import com.admin.service.ProductService;
+import com.store.persistence.domain.Product;
+import com.store.persistence.repo.ProductRepository;
+import com.store.service.ProductService;
 
 @Component("productService")
 @Transactional

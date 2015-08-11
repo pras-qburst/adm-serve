@@ -1,4 +1,4 @@
-package com.admin.controller;
+package com.store.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.admin.persistence.domain.Product;
-import com.admin.persistence.domain.ProductCategory;
-import com.admin.persistence.domain.ServiceType;
-import com.admin.service.CategoriesService;
-import com.admin.service.ProductService;
-import com.admin.service.ServiceTypeService;
+import com.store.persistence.domain.Product;
+import com.store.persistence.domain.ProductCategory;
+import com.store.persistence.domain.ServiceType;
+import com.store.service.CategoriesService;
+import com.store.service.ProductService;
+import com.store.service.ServiceTypeService;
 
 
 @RestController

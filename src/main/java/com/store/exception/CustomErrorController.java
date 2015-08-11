@@ -1,4 +1,4 @@
-package com.admin.exception;
+package com.store.exception;
 
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.web.bind.annotation.RequestMapping;

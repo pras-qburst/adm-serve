@@ -1,4 +1,4 @@
-package com.admin.persistence.domain;
+package com.store.persistence.domain;
 
 /**
  * @author Prasanth Pai

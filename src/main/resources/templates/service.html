@@ -53,37 +53,37 @@
 								color="blue">{{api}} </font> <span class="action-status"></span>
 							</a>
 						</div> -->
-						<div  ng-repeat="item in list">
+						 
+						<div  ng-repeat="item in list" class="container">
 						  
-							 <table class="table">
-							   <tr><td>
-									
-								
-					                 <div >
+							<div class="row">
+			                    <div class="col-sm-4 col-md-4 col-lg-4">
+							   
+						             <div >
 										<a href="#"> Name : <font size="3"
 											color="blue">{{item.name}} </font> <span class="action-status"></span>
 										</a>
 										
-										</div>
-										<div>
-										 Description 
+										<br/> Description :
 										<p><h5>{{item.description}}</h5></p>
 									</div>
-									<div class="dataDiv">
+									<div>
 										<!-- <a href="#" class="uncheckedClass">
 											<p>{{list}}</p> <span class="action-status"></span>
 										</a> -->
 										<!-- <a href="#" title="Header" data-toggle="popover" data-placement="right" data-content="{{list}}">JSON Data</a> -->
 									     <a href="#"  title="{{list}}">JSON DATA</a>
 									</div>
-					             </td>
-					             <td>
+					             </div>
+					             <div class="col-sm-4 col-md-4 col-lg-4">
+					             <div>
 					             <img th:src="@{./images/{{item.logopath}}}" src="./images/{{item.logopath}}"
 					                        class="img-responsive" alt="Image" />
-					             </td>
-					             </tr>
-							  </table>
-						</div>
+					              </div>
+					             </div>
+					            </div>
+								</div>
+						
 					</div>
 
 				</div>

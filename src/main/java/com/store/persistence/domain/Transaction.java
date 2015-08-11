@@ -1,4 +1,4 @@
-package com.admin.persistence.domain;
+package com.store.persistence.domain;
 
 import java.util.Date;
 

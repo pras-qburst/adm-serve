@@ -14,40 +14,40 @@
  * limitations under the License.
  */
 
-package com.admin.service.impl;
+package com.store.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.admin.persistence.domain.ServiceType;
-import com.admin.persistence.repo.ServiceTypeRepository;
-import com.admin.service.ServiceTypeService;
+import com.store.persistence.domain.ProductCategory;
+import com.store.persistence.repo.CategoriesRepository;
+import com.store.service.CategoriesService;
 
-@Component("serviceTypeService")
+@Component("categoriesService")
 @Transactional
-class ServiceTypeServiceImpl implements ServiceTypeService {
+class CategoriesServiceImpl implements CategoriesService {
 
-	private final ServiceTypeRepository serviceTypeRepository;
+	private final CategoriesRepository categoriesRepository;
 
 
 
 	@Autowired
-	public ServiceTypeServiceImpl(ServiceTypeRepository serviceTypeRepository) {
-		this.serviceTypeRepository = serviceTypeRepository;
+	public CategoriesServiceImpl(CategoriesRepository categoriesRepository) {
+		this.categoriesRepository = categoriesRepository;
 	}
 
-
-
+	@PreAuthorize("true")
 	@Override
-	public List<ServiceType> getAllServiceTypeForChannel(String channelId) {
+	public List<ProductCategory> getCategoriesForChannel(String channelId) {
 		// TODO Auto-generated method stub
-		return serviceTypeRepository.findByChannelId(channelId);
+		return this.categoriesRepository.findByChannelId(channelId);
+		
 	}
-
-	
 	
 	
 

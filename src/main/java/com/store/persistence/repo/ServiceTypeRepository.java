@@ -1,13 +1,13 @@
 
 
-package com.admin.persistence.repo;
+package com.store.persistence.repo;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 
-import com.admin.persistence.domain.ServiceType;
+import com.store.persistence.domain.ServiceType;
 
 public interface ServiceTypeRepository extends Repository<ServiceType, Long> {
 

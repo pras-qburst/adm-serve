@@ -17,9 +17,23 @@ th:href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" med
 		<font size="3" color="red">Invalid username and password.!</font>
 		</div>
 		<div th:if="${param.logout}"><font size="3" color="blue">You have been logged out.</font></div>
+		<!-- <img th:src="@{./images/sports.png}"
+          src="./images/sports.png" class="img-responsive" alt="Responsive image"/> -->
+		<h1>Welcome To Sports Store</h1>
+		<!--  <img src="./images/sport_ball.jpg" alt="Image" style="width:150px;height:150px"></img> -->
+		 <img th:src="@{./images/sport_ball.jpg}"
+          src="./images/sport_ball.jpg" class="img-responsive" alt="Responsive image"/>
+          
 		<form th:action="@{/login}" method="post">
-			<div>
-				<label> User Name : <input type="text" name="username" />
+			<table class="table-condensed table-bordered">
+			<tr><td><label> User Name :</label> </td><td><input type="text" name="username" /></td></tr>
+			<tr><td><label>  Password: </label> </td><td><input type="password" name="password" /></td></tr>
+			<tr><td><input type="submit" value="Sign In" /></td></tr>
+			</table>
+			
+			<!-- <div>
+			
+				<label> User Name : </td><td><input type="text" name="username" />
 				</label>
 			</div>
 			<div>
@@ -28,8 +42,9 @@ th:href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" med
 			</div>
 			<div>
 				<input type="submit" value="Sign In" />
-			</div>
+			</div> -->
 		</form>
+		
 	  </div>
 </body>
 </html>

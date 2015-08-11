@@ -37,8 +37,8 @@ public class Product implements Serializable {
 	/**
 	 * Product name
 	 */
-	@Column(name = "product_name")
-	private String productName = "";
+	@Column(name = "name")
+	private String name = "";
 
 	/**
 	 * Category ID associated with Product
@@ -96,7 +96,19 @@ public class Product implements Serializable {
 	private String productStatus;
 
 	
+	/**
+	 * Logo path
+	 */
+	@Column(name = "logo_path")
+	private String logopath;
+	
+	/**
+	 * Description
+	 */
+	@Column(name = "description")
+	private String description;
 
+	
 
 	/**
 	 * @return the boId
@@ -116,16 +128,16 @@ public class Product implements Serializable {
 	/**
 	 * @return the boName
 	 */
-	public String getProductName() {
-		return productName;
+	public String getName() {
+		return name;
 	}
 
 	/**
 	 * @param boName
 	 *            the boName to set
 	 */
-	public void setProductName(String productName) {
-		this.productName = productName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	
@@ -222,7 +234,17 @@ public class Product implements Serializable {
 		this.activationStatus = activationStatus;
 	}
 
+	public String getLogopath() {
+		return logopath;
+	}
 
+	public void setLogopath(String logopath) {
+		this.logopath = logopath;
+	}
+
+	public void setProductStatus(String productStatus) {
+		this.productStatus = productStatus;
+	}
 	public String getProductStatus() {
 		return productStatus;
 	}
@@ -261,6 +283,14 @@ public class Product implements Serializable {
 		if (productId != other.productId)
 			return false;
 		return true;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

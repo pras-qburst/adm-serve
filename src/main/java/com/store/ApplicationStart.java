@@ -15,7 +15,6 @@ import org.springframework.http.HttpStatus;
  * @author prasanth
  *
  */
-
 @SpringBootApplication
 // same as @Configuration @EnableAutoConfiguration @ComponentScan
 public class ApplicationStart {
@@ -34,7 +33,6 @@ public class ApplicationStart {
 	 * 
 	 * @return
 	 */
-	
 	@Bean
 	public EmbeddedServletContainerCustomizer containerCustomizer() {
 

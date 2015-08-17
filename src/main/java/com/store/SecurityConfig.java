@@ -14,30 +14,28 @@ import org.springframework.security.config.annotation.web.servlet.configuration.
  * @author prasanth
  *
  */
-
 @Configuration
 @EnableWebMvcSecurity
 @EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-	
+
 	/**
-	 * Secures all pages except path to /images and /login 
+	 * Secures all pages except path to /images and /login
 	 */
-	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests().antMatchers("/images/**").permitAll()
 				.anyRequest().authenticated().and().formLogin()
 				.loginPage("/login").permitAll().and().logout().permitAll();
 	}
-	
+
 	/**
-	 *  configure Authentication Scheme ,application uses in memory authentication 
-	 *  
+	 * configure Authentication Scheme ,application uses in memory
+	 * authentication
+	 * 
 	 * @param auth
 	 * @throws Exception
 	 */
-
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth)
 			throws Exception {
